@@ -1,0 +1,5 @@
+require 'spree_core'
+require 'spree_cloudinary/engine'
+require 'spree_cloudinary/version'
+require 'carrierwave'
+require 'cloudinary'
