@@ -7,6 +7,7 @@ Spree::Image.class_eval do
   def destroy_attached_files; end
 
   def attachment_file_name
-    attachment.file.filename
+  	# handle NilClass gracefully
+    attachment.file.nil? ? "" : attachment.file.filename
   end
 end
