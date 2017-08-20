@@ -7,6 +7,8 @@ Spree::Image.class_eval do
   def destroy_attached_files; end
 
   def attachment_file_name
-    attachment.file.filename
+  	# spree_cloudinary bug, NilClass
+    # attachment.file.filename
+    "not_blank" # from original spree_cloudinary
   end
 end
